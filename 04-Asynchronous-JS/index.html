@@ -1,0 +1,31 @@
+<!-- ============================================
+  TOPIC: setTimeout in the Browser (DOM Example)
+  ============================================
+  This demonstrates how setTimeout works with
+  the DOM. The <h1> text changes after 2 seconds,
+  showing async behavior in a real webpage.
+  ============================================ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS - setTimeout Demo</title>
+  </head>
+  <body>
+
+    <h1>Hello World</h1>
+    <h2>End of the program</h2>
+
+    <script>
+      // After 2 seconds, the h1 text will change
+      // This shows that setTimeout is non-blocking:
+      // the page loads immediately, then updates later
+      setTimeout(() => {
+        document.querySelector("h1").innerHTML = "Hello World 2 changeddddddd yeyyyyyy!!!!";
+      }, 2000);
+    </script>
+
+  </body>
+</html>
