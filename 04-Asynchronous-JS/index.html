@@ -18,13 +18,22 @@
     <h1>Hello World</h1>
     <h2>End of the program</h2>
 
-    <script>
+    <!-- <script>
       // After 2 seconds, the h1 text will change
       // This shows that setTimeout is non-blocking:
       // the page loads immediately, then updates later
+      
       setTimeout(() => {
         document.querySelector("h1").innerHTML = "Hello World 2 changeddddddd yeyyyyyy!!!!";
       }, 2000);
+    </script> -->
+
+ 
+    <button onclick="changeText()">Change Text</button>
+    <script>
+      function changeText() {
+        document.querySelector("h1").innerHTML = "Hello World 2 changeddddddd yeyyyyyy!!!!";
+      }
     </script>
 
   </body>

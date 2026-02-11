@@ -12,7 +12,7 @@
 // greet("John", "byee");
 
 
-fucntion checkLogin(callback) {
+function checkLogin(callback) {
     setTimeout(() => {
         console.log("Login successful");
         callback();
@@ -39,4 +39,12 @@ function placeOrder(callback) {
     }, 2000);
 }
 
-checkLogin(verifyCart(proceedToPayment(placeOrder)))
+checkLogin(()=>{
+    verifyCart(()=>{
+        proceedToPayment(()=>{
+            placeOrder(()=>{
+                console.log("Order placed");
+            });
+        });
+    });
+});
